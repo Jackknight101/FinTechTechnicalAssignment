@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>   
+    <meta name= "viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>
+        My Bitcoin Wallet
+        </title>
+        
+        <script 
+        type="text/javascript" src="https://unpkg.com/bsv@0.30.0/bsv.min.js">
+        </script> 
+
+        <link rel="stylesheet" href= "Index_style.css"/>
+         
+    </head> 
+
+<body> 
+<div>
+
+<a href = "Index.html">Wallet Homepage</a>
+<a href="live_info.html">Live Info</a>
+
+
+
+</div>
+
+<div> 
+    <h1> Live Cryptocurrency Prices </h1>
+    <p>
+   BTC Price: £<span id='BTC'></span> <br/> 
+    BSV Price:  £<span id="BSV"></span> <br/>
+    BCH Price:  £<span id="BCH"></span>            <br/>
+    Ethereum Price: £<span id="ETH"></span>            <br/>
+    XRP Price:   £<span id="XRP"> </span>     <br/>
+
+     
+
+</p>
+</div> 
+
+<div> 
+<h2> Quandl Information </h2>
+
+<p> 
+Apple Adjusted Close Price (28/12/2017): $<span id='quandl'> </span> <br/>
+Disney Adjusted Close Price (28/12/2017): $<span id="quandl1"> </span> <br/>
+Home Depot Adjusted Close Price (28/12/2017):$<span id="quandl2"> </span> <br/>
+Microsoft Adjusted Close Price (28/12/2017):$<span id="quandl3"> </span> <br/>
+Boeing Adjusted Close Price (28/12/2017):$<span id="quandl4"> </span> <br/>
+
+</p>
+
+
+</div>
+
+
+<script src="live_info.js"> 
+</script>
+
+    
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>   
+    <meta name= "viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>
+        My Bitcoin Wallet
+        </title>
+        
+        <script 
+        type="text/javascript" src="https://unpkg.com/bsv@0.30.0/bsv.min.js">
+        </script> 
+
+        <link rel="stylesheet" href= "Index_style.css"/>
+         
+      
+        <script type="text/javascript" src="qrcode.js">
+        
+        </script>
+
+
+    </head> 
+
+<body> 
+
+    <div>
+    
+        <a href = "Index.html">Wallet Homepage</a>
+        <a href="live_info.html">Live Info</a>
+        
+        </div>
+        
+<div id="block"> 
+<h2 id = "head"> Your Public Key is: </h2>
+<p id= "pubText"></p>
+</div>
+
+<script>
+    var privKey = bsv.PrivateKey.fromRandom(); 
+    
+    var pubKey= bsv.PublicKey.fromPrivateKey(privKey);
+
+    var address = bsv.Address.fromPublicKey(pubKey).toString();
+    
+document.getElementById("pubText").innerHTML=pubKey
+
+   
+</script> 
+
+
+
+ 
+
+
+<div id="qrcode"> </div> <br/> 
+<script type="text/javascript">
+new QRCode(document.getElementById("qrcode"),bsv.Address.fromPublicKey(pubKey).toString());
+</script> 
+
+
+
+
+
+<div>
+    <script type="text/javascript" src="WOC.js"> </script>
+Confirmed Balance: <span id='BAL'></span> <br/>
+Unconfirmed Balance: <span id='BAL1'> </span>
+</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
